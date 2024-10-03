@@ -1,0 +1,8 @@
+require("kabirpathak.plugins-setup")
+require("kabirpathak.core.options")
+require("kabirpathak.core.keymaps")
+require("kabirpathak.core.colorscheme")
+require("kabirpathak.plugins.comment")
+require("kabirpathak.plugins.nvim-tree")
+require("kabirpathak.plugins.lualine")
+require("kabirpathak.plugins.telescope")
