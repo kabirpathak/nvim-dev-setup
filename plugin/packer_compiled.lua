@@ -84,6 +84,14 @@ _G.packer_plugins = {
     path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["lazygit.nvim"] = {
+    commands = { "LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/opt/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -142,6 +150,46 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'LazyGitFilter', function(cmdargs)
+          require('packer.load')({'lazygit.nvim'}, { cmd = 'LazyGitFilter', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'lazygit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LazyGitFilter ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LazyGitFilterCurrentFile', function(cmdargs)
+          require('packer.load')({'lazygit.nvim'}, { cmd = 'LazyGitFilterCurrentFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'lazygit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LazyGitFilterCurrentFile ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LazyGit', function(cmdargs)
+          require('packer.load')({'lazygit.nvim'}, { cmd = 'LazyGit', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'lazygit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LazyGit ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LazyGitConfig', function(cmdargs)
+          require('packer.load')({'lazygit.nvim'}, { cmd = 'LazyGitConfig', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'lazygit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LazyGitConfig ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LazyGitCurrentFile', function(cmdargs)
+          require('packer.load')({'lazygit.nvim'}, { cmd = 'LazyGitCurrentFile', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'lazygit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LazyGitCurrentFile ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

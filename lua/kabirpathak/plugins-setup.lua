@@ -33,6 +33,20 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   
+  -- lazygit
+  use({ "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    requires = {
+      'nvim-lua/plenary.nvim',
+    },
+  })
+  
   -- fuzzy finding
   use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
   use'nvim-telescope/telescope.nvim'
