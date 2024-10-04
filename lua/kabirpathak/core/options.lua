@@ -22,7 +22,7 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "light"
+opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace

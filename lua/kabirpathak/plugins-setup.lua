@@ -23,7 +23,9 @@ vim.cmd([[
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'bluz71/vim-nightfly-guicolors'
+  use 'folke/tokyonight.nvim'
+  -- use 'EdenEast/nightfox.nvim'
+  -- use 'bluz71/vim-nightfly-guicolors'
   use 'christoomey/vim-tmux-navigator' -- ctrl + j,k / ctrl h,l
   use 'szw/vim-maximizer' -- ' ' sm
   use 'tpope/vim-surround' -- ys w " / cs " ' / ds "
