@@ -37,8 +37,22 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 --vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
+
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+vim.keymap.set("n", "<leader>+", function()
+  local view = require'nvim-tree.view'
+  view.View.width = view.View.width + 5
+  view.resize()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>-", function()
+  local view = require'nvim-tree.view'
+  view.View.width = view.View.width - 5
+  view.resize()
+end, { noremap = true, silent = true })
+
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
