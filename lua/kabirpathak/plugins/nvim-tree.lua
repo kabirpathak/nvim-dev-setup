@@ -21,4 +21,10 @@ nvimtree.setup({
       },
     },
   },
+  tab = {
+    sync = {
+      open = true,              -- Ensure nvim-tree stays open in new tabs
+      close = true,             -- Close tree when all tabs are closed
+    },
+  },
 })
