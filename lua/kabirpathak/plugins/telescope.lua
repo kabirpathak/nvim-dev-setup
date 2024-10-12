@@ -16,8 +16,26 @@ telescope.setup({
         ["<C-j>"] = actions.move_selection_next,
         ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
       }
-    }
-  }
+    },
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
+      no_ignore = true,
+      file_ignore_patterns = {
+        "node_modules",
+        ".ruff_cache",
+        ".git/",
+        ".mypy_cache",
+      },
+    },
+  },
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown({}),
+    },
+  },
 })
 
+telescope.load_extension("ui-select")
 telescope.load_extension("fzf")

@@ -52,6 +52,7 @@ return require('packer').startup(function(use)
   
   -- fuzzy finding
   use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use 'nvim-telescope/telescope-ui-select.nvim'
   use'nvim-telescope/telescope.nvim'
   if packer_bootstrap then
     require('packer').sync()
