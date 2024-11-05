@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'f-person/git-blame.nvim'
+  use 'kchmck/vim-coffee-script'
   
   -- lazygit
   use({ "kdheepak/lazygit.nvim",
