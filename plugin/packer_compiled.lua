@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["auto-session"] = {
+    loaded = true,
+    path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
+  },
   ["git-blame.nvim"] = {
     loaded = true,
     path = "/Users/kabirpathak/.local/share/nvim/site/pack/packer/start/git-blame.nvim",

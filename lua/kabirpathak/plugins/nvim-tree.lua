@@ -28,3 +28,4 @@ nvimtree.setup({
     },
   },
 })
+

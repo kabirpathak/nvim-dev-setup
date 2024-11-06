@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'f-person/git-blame.nvim'
   use 'kchmck/vim-coffee-script'
+  use 'rmagatti/auto-session'
   
   -- lazygit
   use({ "kdheepak/lazygit.nvim",

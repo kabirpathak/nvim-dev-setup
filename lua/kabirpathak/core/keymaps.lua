@@ -37,6 +37,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 --vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
+--auto-session
+keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
+keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for cwd" })
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
