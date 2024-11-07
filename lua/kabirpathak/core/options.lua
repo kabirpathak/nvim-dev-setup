@@ -4,6 +4,9 @@ local opt = vim.opt -- for conciseness
 opt.relativenumber = true
 opt.number = true
 
+-- Disable swap files
+opt.swapfile = false
+
 -- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2

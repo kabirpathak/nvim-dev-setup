@@ -1,9 +1,6 @@
 -- Plugin setup
 require("kabirpathak.plugins-setup")
 
--- Disable swap files
-vim.opt.swapfile = false
-
 -- Core settings
 require("kabirpathak.core.options")
 require("kabirpathak.core.keymaps")
